@@ -2,3 +2,25 @@ body{
     background-image:url('../images/space.jpeg');
     background-size: cover;
 }
+
+#loginForm{
+    width: 220px;
+    height: 100px;
+    background-color: darkblue;
+    border: 3pt solid purple;
+    text-align: center;
+    float: right;
+    border-radius: 15px;
+}
+
+#mainText{
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    color: blue;
+      font-size: 100px;
+    letter-spacing: 12px;
+    box-shadow: 1px 1px 201px purple;
+}
+
+
