@@ -13,6 +13,7 @@
 }
 
 h3{
+
 font-family: sans-serif;
 color: white;
 }
@@ -20,7 +21,7 @@ color: white;
 </head>
 
 <body>
-    <h1 id="mainText">Lunar Escape</h1>
+    <div id="fontLine"><h1 id="mainText">Orbital Escape</h1></div>
     <div id="loginForm">
         <h3>Members Login</h3>
         <input type="text" name"userName" id="userName" placeholder="UserName">
