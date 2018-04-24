@@ -7,18 +7,18 @@ body{
     justify-content: center;
     align-items: center;
     z-index: 2;
+    position: absolute;
 }
 
 #loginForm{
-    display: none;
-    width: 220px;
-    height: 100px;
-    
+    width: 320px;
+    height:300px;
     background-color: darkblue;
     border: 3pt solid purple;
     text-align: center;
-    float: right;
+    
     border-radius: 15px;
+    margin: 0 auto;
 }
 
 #mainText{
@@ -39,7 +39,7 @@ body{
     box-shadow: 1px 1px 201px purple;
 }
 #fontLine::after {
-    margin-top: 10px;
+    margin-top: 15px;
 	content: ''; 
 	width: 100%; 
 	height: 100%; 
@@ -50,5 +50,14 @@ body{
 	z-index: -1;    
         
     box-shadow: 1px 1px 201px purple;
-
-
+}
+#coverPage{
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    opacity: 0.5;
+    background-color: grey;
+    border: 3pt solid rebeccapurple;
+    border-radius: 15px;
+    
+}
