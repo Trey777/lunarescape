@@ -23,6 +23,7 @@ color: white;
 </head>
 
 <body>
+    <div id="coverPage" name="coverPage"><input type="button" id="dismissButton" value="Dismiss" onclick="coverPage()"></div>
     <div id="fontLine" onclick="mainLine()"><div id="mainText">Orbital Escape</div>
     <div id="loginForm">
     <form method="post"  action="memberLogin.php">
@@ -34,5 +35,6 @@ color: white;
     <h3>If you do not have an account, click here</h3>
    </div>
 <script type="text/javascript" src="js/scripts.js">
+</script>
 </body>
 </html>

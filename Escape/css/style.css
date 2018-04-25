@@ -7,7 +7,7 @@ body{
     justify-content: center;
     align-items: center;
     z-index: 2;
-    position: absolute;
+    position: relative;
 }
 
 #loginForm{
@@ -52,12 +52,34 @@ body{
     box-shadow: 1px 1px 201px purple;
 }
 #coverPage{
-    width: 300px;
-    height: 400px;
+    width: 600px;
+    height: 650px;
+    top: 50px;
     margin: 0 auto;
-    opacity: 0.5;
-    background-color: grey;
+    background-color: black;
     border: 3pt solid rebeccapurple;
     border-radius: 15px;
+    display: inline-block;
+    position: absolute;
+    z-index: 3;
+    opacity: 0.7;
     
+}
+#dismissButton{
+    margin-bottom: 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px;
+    height: 40px;
+    width: 80px;
+    box-shadow: 10px 10px 2px black;
+    background-color: blue;
+    color: yellow;
+
+}
+#coverPage{
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
 }
