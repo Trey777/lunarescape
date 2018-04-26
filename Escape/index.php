@@ -23,7 +23,13 @@ color: white;
 </head>
 
 <body>
-    <div id="coverPage" name="coverPage"><input type="button" id="dismissButton" value="Dismiss" onclick="coverPage()"></div>
+<div id="coverPage" name="coverPage">
+
+
+
+<input type="button" id="dismissButton" value="Dismiss" onclick="coverPage()">
+
+</div>
     <div id="fontLine" onclick="mainLine()"><div id="mainText">Orbital Escape</div>
     <div id="loginForm">
     <form method="post"  action="memberLogin.php">
