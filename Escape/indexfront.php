@@ -16,12 +16,13 @@
     margin: 0 auto;
     position: relative;
 }
+
 #fontPageBox{
     left: 35vw;
     top: 10vw;
     border: 3pt solid crimson;
     margin: 0 auto;
-    background-color: skyblue;
+    background-color: black;
     opacity: 0.4;
     height: 500px;
     width: 500px;
@@ -39,11 +40,11 @@
         <div id="frontHeader">
         <h4 class="noticeText">***Notice: For Offical use only!!!! Non-restricted use is forbidden ****</h4>
         </div>
-
         <div id="frontFooter">
             <h4 class="noticeText" id="frontFooter">***Notice: For Offical use only!!!! Non-restricted use is forbidden ****</h4>
         </div>
     </div>
+        <img src="images/tlogo.jpg">
 
 
 
