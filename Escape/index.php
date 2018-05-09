@@ -6,31 +6,23 @@
 <meta charset="UTF-8">
 <meta name="keywords" content=""/>
 <link href="css/style.css" rel="stylesheet"/>
+
 <style>
-    input{
-    margin-top: 10px;
-    width: 80px;
-}
-
-h3{
-
-font-family: sans-serif;
-color: white;
-}
 </style>
-<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
-
+ <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
 </head>
 
 <body>
-<div id="coverPage" name="coverPage">
-
-
-
-<input type="button" id="dismissButton" value="Dismiss" onclick="coverPage()">
+<form method="POST"  action="mainpage.php" id="mainForm">
+<div class="formInputs" id="signUpDiv" name="signUpDiv">
 
 </div>
-    <div id="fontLine" onclick="mainLine()"><div id="mainText">Orbital Escape</div>
-</script>
+
+<div id="loginDiv" class="formInputs" name="loginDiv">
+
+</div>
+
+</form>
+
 </body>
 </html>

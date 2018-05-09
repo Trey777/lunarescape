@@ -8,7 +8,10 @@
     <meta name="title" content=""/>
     <style>
         body{
-        background-color:black;
+
+        background-image: url(images/darkblueback.jpg);
+        background-position: center;
+        background-size: cover;
 }
     .noticeText{
     color:red;
@@ -30,7 +33,11 @@
     position: absolute;
 }
 #frontFooter{
-   top: 350px;
+   top: 400px;
+    text-align:center;
+}
+#fontHeader{
+    text-align:center;
 }
     </style>
 </head>
@@ -44,7 +51,6 @@
             <h4 class="noticeText" id="frontFooter">***Notice: For Offical use only!!!! Non-restricted use is forbidden ****</h4>
         </div>
     </div>
-        <img src="images/tlogo.jpg">
 
 
 

@@ -1,98 +1,37 @@
 body{
-    margin-top: 50px;
-    background-image:url('../images/space.jpeg');
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    position: relative;
+background-image:url(../images/veges.jpg);
+background-repeat: no-repeat;
+background-position: 50% 15%;
+background-size: cover;
+margin-top: 150px;
+}
+#mainForm{
+
+    margin: 0 auto;
+    height: 400px;
+    width: 420px;
+    background-color: #003;
+    box-shadow: 0px 40px 80px #034;
+    padding: 25px;
+    
 }
 
-#loginForm{
-    width: 320px;
-    height:300px;
-    background-color: darkblue;
-    border: 3pt solid purple;
-    text-align: center;
-    border-radius: 15px;
-    margin: 0 auto;
+#loginDiv {
+    width: 200px;
+    background-color: #116;
+    margin-left: 0;
+    padding: 0;
+    float: left;
 }
-
-#mainText{
-    font-family: 'Orbitron', sans-serif;
-    text-align: center;
-    font-weight: bold;
-    color: blue;
-      font-size: 100px;
-    letter-spacing: 12px;
-    position: relative; 
-    z-index: 2;
-      
+#signUpDiv {
+    margin-right: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #116;
 }
-#fontLine{
-    margin-top: 10px;
-    height: 70px; 
-    position: relative;
-    box-shadow: 1px 1px 201px purple;
-}
-#fontLine::after {
-    margin-top: 15px;
-	content: ''; 
-	width: 100%; 
-	height: 100%; 
-	opacity: 0.5; 
-	position: absolute; 
-	top: 0; 
-	left: 0;
-	z-index: -1;    
-        
-    box-shadow: 1px 1px 201px purple;
-}
-#coverPage{
-    width: 600px;
-    height: 650px;
-    top: 50px;
-    margin: 0 auto;
-    background-color: black;
-    border: 3pt solid rebeccapurple;
-    border-radius: 15px;
+#signUpDiv, #loginDiv{
     display: inline-block;
-    z-index: 3;
-    opacity: 0.7;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    
 }
-#bottonRedText{
-    top: 40px;
-}
-#bottomRedText, #topRedText{
-    color:red;
-    
-}
-#dismissButton{
-    margin-bottom: 20px;
-    border-radius: 15px;
-    font-weight: bold;
-    font-size: 15px;
-    padding: 10px;
-    height: 40px;
-    color: black;
-    background-color:grey;
-    width: 80px;
-    box-shadow: 10px 10px 2px black;
-
-}
-#dismissButton:hover{
-    
-    background-color: blue;
-    color: yellow;
-}
-#coverPage{
-    display:flex;
-    justify-content: center;
-    align-items: flex-end;
+.formInputs{
+    height: 60px;
 }
