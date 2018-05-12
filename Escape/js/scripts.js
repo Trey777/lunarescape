@@ -1,19 +1,17 @@
+			
+	const signUpDiv = document.getElementById('signUpDiv');
+	const logInDiv = document.getElementById('logInDiv');
+	const signUp = document.getElementById('signUp');
+	const login = document.getElementById('login');
 
+function signUpFunction(){
 
-function formChanger(){
+	signUp.style.display='block';
+	login.style.display='none';
 
-    const signUpDiv = document.getElementById('signUpDiv');
-    const loginDiv = document.getElementById('loginDiv');
-
-    if(signUpDiv.style.backgroundColor = '#116'){
-
-        signUpDiv.style.backgroundColor = '#1DA6B3';
-        loginDiv.style.backgroundColor = '#116';
 }
-    else if(loginDiv.style.backgroundColor = '#116'){
+function loginFunction(){
+	login.style.display ='initial';
+	signUp.style.display='none';
 
-            loginDiv.style.backgroundColor = '#1DA6B3';
-            signUpDiv.style.backgroundColor = '#116';
-
-    }
 }
