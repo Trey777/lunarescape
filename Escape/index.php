@@ -24,6 +24,7 @@ $lastName = stripslashes($lastName);
 
 $userName = $_POST['userName'];
 $userName = mysqli_real_escape_string($conn, $userName);
+$userName = stripslashes($userName);
 
 
 $userPass = $_POST['userPass'];
@@ -43,7 +44,7 @@ else{
 }
 
 
-if(isset($POST_['loginSubmit'])){
+if(isset($_POST['loginSubmit'])){
 	$user = $_POST['userLogin'];
 	$pass = $_POST['passwordLogin'];
 
@@ -54,12 +55,19 @@ if(isset($POST_['loginSubmit'])){
 
 	if(mysqli_num_rows($results) == 1){
 
+		if(password_verify($pass, $row['pswd'])){
+
 		
 		$msg = "Initializing Successful Access.";
-		header("Refresh: 5; url=welcompage.php", true, 303);
+		header("Refresh: 5; url=welcomepage.php", true, 303);
+
+		}
+		else{
+			$msg = "Incorrect Password";
+		}
 	}
 	else{
-		$msg = "Incorrect Credentials.";
+		$msg = "Incorrect Username";
 	}
 
 }
@@ -86,11 +94,10 @@ else {
 </head>
 
 <body>
-<div id="errorBox"><span style='color:red'><?php echo $msg ?></span></div>
-<div class="form">
+<div class="form" id="mainForm">
 	<ul class='tab-group'>
-		<li class='tab active'><a href='#signup' onclick='signUpFunction()'>Sign Up</a><li>
-		<li class='tab'><a href='#login' onclick='loginFunction()'>Log In</a></li>
+		<li class='tab active'><a href='#signup' id='signupButton'onclick='signUpFunction()'>Sign Up</a><li>
+		<li class='tab'><a href='#login' id='loginButton' onclick='loginFunction()'>Log In</a></li>
 	</ul>
 	<div class='tab-content'>
 		<div id='signUp'>
@@ -121,23 +128,33 @@ else {
 
 <div id="login">
 	<h1>Welcome Back!</h1>
-	<form method='POST' action="">
+	<form method='POST' action="<?php echo $_SERVER['PHP_SELF']; ?>">
 		
 		<div class='field-wrap'>
 			<input type='text' name='userLogin' id='userLogin' required autocomplete='off' placeholder="Username *"/>
 		</div>
+
+
+		<div class='field-wrap' style='display:none'>
+			<input type='password' name='passwordLogin' id='passwordLogin' required autocomplete='off' placeholder='&nbsp; j'/>
+		</div>
+
 
 		<div class='field-wrap'>
 			<input type='password' name='passwordLogin' id='passwordLogin' required autocomplete='off' placeholder="Password *" />
 		</div>
 		<p class='forgot'><a href='#'>Forgot Password?</a></p>
 
-		<input type='submit' class='button button-block' id='loginSubmit'/></button>
+		</br></br></br></br>  <!-- had to be done because my height changes to form completely altered outlook for some reason. -->
+
+		<input type='submit' class='button button-block' id='loginSubmit' name='loginSubmit'/></button>
 	</div>
 </div>
 
 	</form>
-<div id="test"></div>
+
+<p id="errorBox"><span style='color:red'><?php echo $msg ?></span></p>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src='js/scripts.js'>
 </script>
 </body>
