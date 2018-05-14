@@ -130,7 +130,7 @@ margin-top: 80px;
 }
 
 #login{
-	padding-bottom: 20px;
+	padding-bottom: 30px;
 	display: block;
 }
 #signUp{
@@ -194,11 +194,11 @@ display: none;
 	color: red;
 	text-align:center;
 	font-size: 25px;
-	width: 80%;
+	width: 90%;
 	margin: 0 auto;
 	font-family: monospace;
 	margin-top: 20px;
-	margin-left: 50px;
+	margin-left: 30px;
 	background-color: rgba(0,0,1, 0.7);
 	display: block;
 }
@@ -212,4 +212,10 @@ display: none;
 	font-style: italic;
 	font-weight: bold;
 	color: white;
+}
+#aWish{
+position: absolute;
+color: white;
+left: 1300px;
+top: 100px;
 }

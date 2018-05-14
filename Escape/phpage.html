@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <title>PHP</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content=""/>
+        <meta name="description" content=""/>
+        <style>
+textarea{
+	font-size: 25px;
+	color: gold;
+	background-color: rgba(0, 0, 1, 0.6);
+	margin: 0 auto;
+
+}
+body{
+	background-image: url(images/boxes.png);
+}
+        </style>
+    </head>
+<body>
+    
+<textarea rows="80" cols="90">
+
+$conn = mysqli_connect('localhost', 'username', 'password') or die ("Error, Unable to access SQL!");
+mysqli_select_db($conn, 'Database') or die("Error, Unable to access DATABASE!!!");
+
+
+// ***### This portion of code is used to create members accounts ###***
+
+if(isset($_POST['signupSubmit'])){
+
+	$firstName = $_POST['firstName'];
+	$firstName = stripslashes($firstName); //security procedure (Probably not needed);
+	$firstName = mysqli_real_escape_string($conn, $firstName); //Security Procedure
+	$firstLen = strlen($firstName);
+	$firstCharFN = substr($firstName, 0, 1);
+	$capFirst = ucfirst($firstCharFN);
+	
+	
+	$lastName = $_POST['lastName']; 
+	$lastName = stripslashes($lastName); 
+	$lastName = mysqli_real_escape_string($conn, $lastName); 
+	$lastLen = strlen($lastName);
+	$firstCharLN = substr($lastName, 0, 1);
+	$capLast = ucfirst($firstCharLN);
+
+ 	$newName = $capLast.$capFirst."-".$firstLen.$lastLen;
+		
+	$userName = $_POST['userName'];
+	$userName = stripslashes($lastName); 
+	$userName = mysqli_real_escape_string($conn, $userName); 
+
+	$userPass = $_POST['userPass'];
+	$userPass = mysqli_real_escape_string($conn, $userPass);
+	$hashedPass = password_hash($userPass, PASSWORD_DEFAULT);
+
+	$query = "INSERT INTO members (firstName, lastName, user, pswd, newName) ";
+	$query .="VALUES ('$firstName', '$lastName', '$userName', '$hashedPass', '$newName')";
+	mysqli_query($conn, $query);
+
+if(mysqli_affected_rows($conn) == 1){
+	//$msg = "I think it worked...";
+}
+else{
+	//$msg = "I dont think it worked...";
+}
+}
+
+// ***### This portion of code is used to verify/grant access to current members ###***
+
+	if(isset($_POST['loginSubmit'])){
+
+	$newForm = $_POST['newForm'];
+	$newForm = stripslashes($newForm); //security procedure (Probably not needed);
+	$newForm = mysqli_real_escape_string($conn, $newForm); //Security procedure
+
+	$pass = $_POST['passwordLogin'];
+
+	$query = "SELECT * FROM members WHERE newName = '$newForm'";
+    $results =	mysqli_query($conn, $query);
+
+	$row = mysqli_fetch_array($results);
+
+	if(mysqli_num_rows($results) == 1){
+
+		if(password_verify($pass, $row['pswd'])){
+
+		$msg = "Welcome....<span style='color:green;'>$newForm</span>";
+		header("Refresh: 5; url=welcomepage.php", true, 303);
+
+		}
+		else{
+		$msg = "Incorrect Credentials";
+    }
+
+
+	}
+	else{
+		
+	}
+
+
+	
+	}
+
+
+?->
+</textarea>
+    
+    </body>
+
+</html>
