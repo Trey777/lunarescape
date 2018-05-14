@@ -159,6 +159,11 @@ display: none;
 	border-top-right-radius:5px;
 	border-bottom-right-radius:5px;
 }
+#loginSubmit, #signupSubmit{
+	font-size: 28px;
+	font-family: 'Orbitron', sans-serif;
+
+}
 #signupButton{
 	border-top-left-radius:5px;
 	border-bottom-left-radius:5px;
@@ -179,4 +184,32 @@ display: none;
 }
 .OEpic{
 	margin-left: 150px;
+}
+.bigRed{
+	color:red;
+	font-size: 35px;
+}
+#messagePrompts{
+	border-radius: 18px;
+	color: red;
+	text-align:center;
+	font-size: 25px;
+	width: 80%;
+	margin: 0 auto;
+	font-family: monospace;
+	margin-top: 20px;
+	margin-left: 50px;
+	background-color: rgba(0,0,1, 0.7);
+	display: block;
+}
+#dismissButton{
+	float: right;
+	width: 100px;
+	height: 40px;
+	background-color:#0C0D7E;
+	border-radius: 14px;
+	font-size: 18px;
+	font-style: italic;
+	font-weight: bold;
+	color: white;
 }

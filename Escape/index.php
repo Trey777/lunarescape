@@ -10,7 +10,6 @@ mysqli_select_db($conn, 'DatabaseOne') or die("Error, Unable to access DATABASE!
 // ***### This portion of code is used to create members accounts ###***
 
 if(isset($_POST['signupSubmit'])){
-	header("Refresh: 4; url=index.php#login", true, 303);
 
 	$firstName = $_POST['firstName'];
 	$firstName = stripslashes($firstName); //security procedure (Probably not needed);
@@ -68,19 +67,24 @@ else{
 
 		if(password_verify($pass, $row['pswd'])){
 
+		$msg = "Welcome....<span style='color:green;'>$newForm</span>";
 		header("Refresh: 5; url=welcomepage.php", true, 303);
 
 		}
 		else{
-			$msg = "<h1>Incorrect Password</h1>";
-	}
+		$msg = "Incorrect Credentials";
+    }
+
 
 	}
 	else{
-		$msg = "<h1>Incorrect Username</h1>";
+		
 	}
 
-}
+
+	
+	}
+
 
 ?>
 
@@ -94,12 +98,14 @@ else{
 <link href="css/style.css" rel="stylesheet"/>
 <link href-https://fonts.googleapis.com.css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
 <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Orbitron" rel="stylesheet">
+
 <style>
 </style>
 </head>
 
 <body>
-<div id="messagePrompts">$msg</div>
+
 <div class="form" id="mainForm">
 	<ul class='tab-group'>
 		<li class='tab active'><a href='#signup' id='signupButton'onclick='highlightSignup()'>Setup</a><li>
@@ -109,7 +115,7 @@ else{
 		<div id='signUp'>
 		<h1></h1>
 
-		<form method="POST"  action="" id="mainform">
+		<form method="POST"  action="<?php echo $_SERVER['PHP-SELF'] ?>" id="mainform">
 	<div class='top-row'>
 		<img src="images/logo.png" class="OEpic"/></br></br>
 		<div class='field-wrap'>
@@ -127,15 +133,15 @@ else{
 	</div>
 	</br></br>
 	<button  type='submit' id='signupSubmit' name='signupSubmit' class='button button-block'>
-			<span style='color: red;'>-</span>MERGE<span style='color: red;'>-</button>
+			<span class='bigRed'>⦕</span>MERGE<span class='bigRed'>⦖</button>
 </form>
 
 </div>
 
 <div id="login">
-<h1><?php echo $newName ?></h1>
+<h1></h1>
 	<p>	
-	<form method='POST' action="welcomepage.php">
+	<form method='POST' action="<?php echo $_SERVER['PHP-SELF'] ?>">
 		<img src="images/logo.png" class="OEpic"/></br></br>
 		<div class='field-wrap'>
 			<input type='text' name='newForm' id='userLogin' class='required' required autocomplete='off' placeholder="New ID:      (example: RS-37)"/>
@@ -149,14 +155,15 @@ else{
 
 		</br></br>  <!-- had to be done because my height changes to form completely altered outlook for some reason. -->
 
-		<input type='submit' class='button button-block' id='loginSubmit' name='loginSubmit'/>⦕ ⦖</input>
+		<button type='submit' class='button button-block' id='loginSubmit' name='loginSubmit'/>
+			<span class='bigRed'>⦕</span> ESCAPE <span class='bigRed'>⦖<span></button>
 	</div>
 </div>
 
+		<div class='field-wrap'>
+	<div id="messagePrompts"><?php echo $msg ?></div>
+</div>
 	</form>
-
-
-
 <script src='js/scripts.js'>
 	
 }

@@ -1,4 +1,6 @@
 			
+	const messagePrompts = document.getElementById('messagePrompts');
+	const dismissButton = document.getElementById('dismissButton');
 	const signupButton = document.getElementById('signupButton');
 	const loginButton = document.getElementById('loginButton');
 	const signUp = document.getElementById('signUp');
@@ -21,7 +23,14 @@ function highlightLogin(){
 
 }
 
+function dismiss(){
+	dismissButton.style.display='none';
+	messagePrompts.style.display='none';
+}
 
+ function test(){
+        alert('In test Function');
+    }
 
 // 		####!!!!SCRAPPED!!!!  WILL LOOK INTO MORE LATER
 //
