@@ -1,0 +1,239 @@
+body{
+	margin: 0 auto;
+	background-image:url("../images/darklinebackground.jpg");
+}
+h4{
+
+	text-alignt:center;
+}
+#computerMonitor{
+	margin: 0 auto;
+	box-shadow: 1px 1px 20px 20px #000;
+	background-size:700px, 500px;
+	width: 70%;
+	height: 90vh;
+	padding-top: 10px;
+	margin-top: 6px;
+	padding-bottom: -10px;
+	margin-top: 50px;
+	margin-top: 30px;
+	background-image: url("../images/yoblueback.png");
+	border-radius: 35px;
+	margin-bottom: 10px;
+	border: 9pt solid #111;
+}
+
+#motionFrame{
+	margin: 0 auto;
+	width: 800px;
+	height: 67vh;
+	background-color: grey;
+	background-repeat: no-repeat;
+	background-position: 30% 80%;
+	background-size: 900px;
+	margin-top: 40px;
+	border-radius: 10px;
+	border-top: 6pt solid skyblue;
+	border-radius: 30px;
+	border-bottom: 6pt solid skyblue;
+	border-left: 9pt solid skyblue;
+	border-right: 9pt solid skyblue;
+	box-shadow: 1px 1px 30px 10px skyblue;
+	display: none;
+	filter: contrast(85%);
+	filter: brightness(90%);
+	background-color: #111;
+	position: relative;
+}
+#coverDiv{
+	margin: 0 auto;
+	width: 800px;
+	height: 66vh;
+	margin-top: 40px;
+	border-radius: 10px;
+	background-color: rgba(28, 206, 219, 0.2);
+	left: 320px;
+	padding-bottom:13px;
+	position:absolute;
+	z-index: 3;
+	display: none;
+}
+#freezeFrame{
+	border-radius: 30px;
+	height: 70vh;
+	background-image: url("../images/redFreeze.jpg");
+	margin: 0 auto;
+	filter: brightness(20%);
+	width: 790px;
+	background-repeat: no-repeat;
+	border-top: 6pt solid rebeccapurple;
+	border-bottom: 6pt solid rebeccapurple;
+	border-left: 9pt solid rebeccapurple;
+	border-right: 9pt solid rebeccapurple;
+	background-position: 10%, 80%;
+	background-size: 2896px;
+	margin-top: 20px;
+}
+#leftDiv{
+	position: absolute;
+	top: 100px;
+	left: 20px;
+	width: 250px;
+	height: 400px;
+	border-radius: 15px;
+	border: solid 0.5px #FC5185;
+	margin: 0.5em;
+	display: none;	
+}
+
+#leftDiv:hover{
+	outline: solid 5px #FC5185;
+	transition: border 0.6s linear;
+	border-width: 10px;
+	background-color: #222;
+}
+
+#powerButtonBlue{
+	border-radius: 50px;
+	position: absolute;
+	height: 80px;
+	bottom: 40px;
+	opacity: 0.4;
+	right: 235px;
+	box-shadow: 1px 1px 15px 1px lime;
+	background-color: rgba(27, 67, 198, 0.8);
+	box-shadow-bottom-right-radius: 20px;
+	box-shadow-bottom-left-radius: 20px;
+	box-shadow-top-right-radius: 20px;
+	box-shadow-top-left-radius: 20px;
+	display: none;
+}
+
+#powerButtonRed{
+	border-radius: 50px;
+	position: absolute;
+	height: 80px;
+	bottom: 40px;
+	opacity: 0.3;
+	right: 235px;
+	box-shadow: 1px 1px 10px 4px black;
+	background-color: crimson;
+	box-shadow-bottom-right-radius: 20px;
+	box-shadow-bottom-left-radius: 20px;
+	box-shadow-top-right-radius: 20px;
+	box-shadow-top-left-radius: 20px;
+}
+
+#bottomTray{
+	position: absolute;
+	bottom: 20px;
+	border-radius: 10px;
+	left: 250px;
+	width: 200px;
+	height: 80px;
+	filter: brightness(50%);
+	background-color: #111;
+}
+
+.computerButtons{
+	margin-top: 15px;
+	margin-left: 10px;
+	float: left;
+	height: 50px;
+	border-radius: 50px;
+
+}
+.computerButtons:hover{
+	box-shadow: 1px 1px 15px 2px white;
+	box-shadow-bottom-right-radius: 20px;
+	box-shadow-bottom-left-radius: 20px;
+	box-shadow-top-right-radius: 20px;
+	box-shadow-top-left-radius: 20px;
+}
+
+#enabledLight{
+	margin-top: 30px;
+	margin-left: 30px;
+	width: 20px;
+	height: 20px;
+	box-shadow: 1px 1px 30px 8px crimson;
+	background-color: red;
+}
+.cameraFeed{
+	font-size: 30px;
+	font-family: monospace;
+	font-weight: 100;
+	opacity: 0.4;
+	color: lime;
+	background-color: black;
+	border-radius: 3px;
+}
+#camFeedOne{
+	margin-right: 10px;
+	float: right;
+	margin-top: 60%;
+}
+
+#camFeedTwo{
+
+	margin-top: 15px;
+	margin-right: -23%;
+	float: right;
+}
+
+#camFeedThree{
+	margin-top: 60%;
+	margin-left: 10px;
+	float: left;
+}
+
+#camFeedFour{
+	margin-top: 15px;
+	margin-left: -23%;
+	float: left;
+}
+#energyBall{
+	margin-top: 30px;
+	margin-left: 30px;
+	position: absolute;
+	z-index: 88;
+}
+#potatoEnergy{
+	margin-top: 80px;
+	margin-left: 20px;
+	position: absolute;
+	z-index: 88;
+}
+#awaitingContainer{
+	color: gold;
+	font-size: 8px;
+	font-family: monospace;
+	text-align: center;
+	width: 30px;
+	top: 40px;
+	position: absolute;
+	right: 294px;
+	clear: both;
+}
+
+#awaitingContainer > img{
+	position: absolute;
+	border-radius: 50px;
+}
+#myVideo{
+	top: 50px;
+	position: absolute;
+}
+
+#littleInventory{
+	text-align: center;
+	font-weight: bold;
+	width: 85px;
+	height: 300px;
+	background-color: #000;
+	position: absolute;
+	top: 50px;
+	border-radius: 8px;
+	color: yellow;
+
+}
